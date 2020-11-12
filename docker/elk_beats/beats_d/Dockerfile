@@ -1,4 +1,4 @@
-FROM robfaber/filebeat
+FROM paulgrav/filebeat:7.9.2
 
 COPY ./config/filebeat.yml /usr/share/filebeat/filebeat.yml
 USER root
