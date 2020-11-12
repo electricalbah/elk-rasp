@@ -3,6 +3,7 @@ services:
   beats:
     build: .
     container_name: beats_c_el
+    command: --strict.perms=false -e  # added by bsco -e flag to log to stderr and disable syslog/file output
     image: beats_i_el:1.0.1
     volumes:
       - ../data/nginx:/var/log/nginx/
