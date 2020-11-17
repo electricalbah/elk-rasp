@@ -20,9 +20,9 @@ filebeat.inputs:
 
 
 #=========================== Logstash Output =============================
-output.logstash:
-  enabled: true
-  hosts: ["logstash:5044"]
+#output.logstash:
+#  enabled: true
+#  hosts: ["logstash:5044"]
 
 
 # -------------------------------- File Output ---------------------------------
