@@ -20,15 +20,15 @@ filebeat.inputs:
 
 
 #=========================== Logstash Output =============================
-#output.logstash:
-#  enabled: true
-#  hosts: ["logstash:5044"]
-
-
-# -------------------------------- File Output ---------------------------------
-# We could see the output log as file in your path to see what happened.
-output.file:
+output.logstash:
   enabled: true
+  hosts: ["logstash:5044"]
+
+
+# -------------------- File Output to check if file beat working fine --------------------
+# We could see the output log as file in your path to see what happened.
+#output.file:
+#  enabled: true
 
   # Configure JSON encoding
   #codec.json:
@@ -40,21 +40,21 @@ output.file:
 
   # Path to the directory where to save the generated files. The option is
   # mandatory.
-  path: "/tmp/filebeat"
+  #path: "/tmp/filebeat"
 
   # Name of the generated files. The default is `filebeat` and it generates
   # files: `filebeat`, `filebeat.1`, `filebeat.2`, etc.
-  filename: filebeat-out
+  #filename: filebeat-out
 
   # Maximum size in kilobytes of each file. When this size is reached, and on
   # every Filebeat restart, the files are rotated. The default value is 10240
   # kB.
-  rotate_every_kb: 10000
+  #rotate_every_kb: 10000
 
   # Maximum number of files under path. When this number of files is reached,
   # the oldest file is deleted and the rest are shifted from last to first. The
   # default is 7 files.
-  number_of_files: 3
+  #number_of_files: 3
 
   # Permissions to use for file creation. The default is 0600.
   #permissions: 0600
